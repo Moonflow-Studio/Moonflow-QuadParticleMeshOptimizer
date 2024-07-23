@@ -41,7 +41,7 @@ namespace Moonflow.MFAssetTools.MFTransparencyConvexBuilder
         private static string PREVIEW_SHADER_TEX_PROP_NAME = "_MainTex";
         private static string PREVIEW_SHADER_TEX_ST_PROP_NAME = "_MainTex_ST";
         
-        [MenuItem("Moonflow/Tools/Assets/MFQuadParticleMeshOptimizer #%V")]
+        [MenuItem("Tools/Moonflow/Tools/Assets/MFQuadParticleMeshOptimizer #%V")]
         private static void ShowWindow()
         {
             _ins = GetWindow<MFQuadParticleMeshOptimizer>();
