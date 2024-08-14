@@ -6,7 +6,7 @@ using System.Reflection;
 using DelaunatorSharp;
 using DelaunatorSharp.Unity.Extensions;
 // using DelaunatorSharp.Unity.Extensions;
-using Sirenix.Utilities;
+// using Sirenix.Utilities;
 using UnityEditor;
 using UnityEngine;
 
@@ -244,11 +244,26 @@ namespace Moonflow.MFAssetTools.MFTransparencyConvexBuilder
         {
             return SortPoint(edgePoints.ToArray());
         }
+        
+        public static void SortPro<Vector2Int>(IList<Vector2Int> list, Comparison<Vector2Int> comparison)
+        {
+            if (list is List<Vector2Int>)
+            {
+                ((List<Vector2Int>) list).Sort(comparison);
+            }
+            else
+            {
+                List<Vector2Int> objList = new List<Vector2Int>((IEnumerable<Vector2Int>) list);
+                objList.Sort(comparison);
+                for (int index = 0; index < list.Count; ++index)
+                    list[index] = objList[index];
+            }
+        }
         private Vector2Int[] SortPoint(Vector2Int[] originalPoints)
         {
             Vector2Int[] sortedPoint = new Vector2Int[originalPoints.Length];
             sortedPoint = originalPoints.ToArray();
-            sortedPoint.Sort(CompareVector2Int);
+            SortPro(sortedPoint, CompareVector2Int);
             return sortedPoint;
         }
         
