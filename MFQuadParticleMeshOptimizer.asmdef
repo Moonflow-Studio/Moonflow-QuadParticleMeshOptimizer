@@ -1,13 +1,14 @@
 {
-    "name": "DelaunatorSharp.Runtime",
-    "references": ["GUID:343deaaf83e0cee4ca978e7df0b80d21"],
+    "name": "MFQuadParticleMeshOptimizer",
+    "rootNamespace": "",
+    "references": [
+        "DelaunatorSharp.Runtime"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
-    "overrideReferences": true,
-    "precompiledReferences": [
-        "DelaunatorSharp.dll"
-    ],
+    "overrideReferences": false,
+    "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [],
