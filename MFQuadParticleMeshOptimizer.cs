@@ -19,7 +19,8 @@ namespace Moonflow.MFAssetTools.MFTransparencyConvexBuilder
         public bool sequenceMode;
         public Vector2Int gridNum = Vector2Int.one;
         public int cuttingMode;
-        private static readonly string[] cuttingModeText = new[] { "裁黑边", "裁透明", "容差裁透明" };
+        private static readonly string[] cuttingModeText = new[] { "Cut Black Edge", "Cut Transparency", "Cut Transparency with Tolerance" };
+        private static readonly string[] cuttingModeTextCN = new[] { "裁黑边", "裁透明", "容差裁透明" };
         public float tolerance;
         public int previewIndex;
         public bool showOutline;
